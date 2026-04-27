@@ -31,10 +31,6 @@ The Application Load Balancer is ideal for layer 7 traffic. It provides load bal
 
 ![Application Load Balancer](images/ALB.png)
 
-The asg is connected to a security group that allows connection using http from the internet.
-
-![Security Group of the ALB](images/SG-InboundRules.png)
-
 alb_dns = *"web-alb-1650564006.us-east-1.elb.amazonaws.com"*
 
 ## Launch Template
@@ -46,6 +42,10 @@ The launch template is created to act as the source for what the AutoScaling gro
 The launch template is attached to the AutoScaling Group. The user specifies the minimum, maximum and desired number of instances that should be deployed. in this case, I specified desired:1, min:1 and max:3.
 
 ![ASG](images/ASG.png)
+
+The asg is connected to a security group that allows connection using http from the internet.
+
+![Security Group of the ALB](images/SG-InboundRules.png)
 
 ### Instances
 **Public instance:**
